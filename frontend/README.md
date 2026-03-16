@@ -1,23 +1,97 @@
-Pulse Frontend - Dockerized Production Run
+# Telegram App Template — фронтенд
 
-This project is a Vite + React application.
+Универсальный шаблон фронтенда для Telegram Mini App (Vite + React). Подходит для быстрого старта новых проектов.
 
-Docker (production)
+## Быстрый старт
 
-- Build image:
-  docker build -t pulse-frontend .
+Можно работать **локально** (удобно для разработки) или **в Docker** (ничего не ставим на компьютер).
 
-- Run container (app will be available at http://localhost:5173):
-  docker run --rm -p 5173:80 pulse-frontend
+---
 
-Notes
+### Вариант 1: Всё в Docker (проще всего)
 
-- The image builds the app and serves the static files with Nginx.
-- If you need environment variables for the build, create a .env file (see .env.example) before building the image.
+**Что нужно:** только [Docker](https://docs.docker.com/get-docker/) на компьютере.
 
-Local development (without Docker)
+1. Откройте терминал и перейдите в папку фронтенда:
+   ```bash
+   cd frontend
+   ```
 
-- Install deps: npm ci
-- Start dev server: npm run dev
-- Build: npm run build
-- Preview built app: npm run preview
+2. Соберите образ (устанавливаются зависимости и собирается проект):
+   ```bash
+   docker build -t telegram-app-frontend .
+   ```
+   Команда скачает Node.js и Nginx внутри контейнера, установит зависимости и выполнит сборку.
+
+3. Запустите приложение:
+   ```bash
+   docker run --rm -p 5173:80 telegram-app-frontend
+   ```
+   Приложение будет доступно по адресу: **http://localhost:5173**
+
+4. Остановка: в терминале нажмите `Ctrl+C`.
+
+**Плюсы:** не нужно ставить Node.js и yarn/npm. **Минус:** при изменении кода нужно заново делать `docker build` и `docker run` (для активной разработки удобнее вариант 2).
+
+---
+
+### Вариант 2: Локальная разработка (рекомендуется для разработки)
+
+**Что нужно:** [Node.js](https://nodejs.org/) версии 18 или 20 (LTS). Тогда будут доступны `npm` и `npx`.
+
+1. Перейдите в папку фронтенда:
+   ```bash
+   cd frontend
+   ```
+
+2. Установите зависимости (один раз):
+   ```bash
+   npm install
+   ```
+   Или, если используете yarn: `yarn install`
+
+3. Запустите сервер разработки:
+   ```bash
+   npm run dev
+   ```
+   В терминале появится адрес (обычно **http://localhost:5173**). Откройте его в браузере. При сохранении файлов страница будет обновляться сама.
+
+4. Остановка: `Ctrl+C` в терминале.
+
+**Полезные команды:**
+
+| Команда | Описание |
+|--------|----------|
+| `npm run dev` | Запуск dev-сервера с горячей перезагрузкой |
+| `npm run build` | Сборка проекта для продакшена (результат в папке `dist/`) |
+| `npm run preview` | Просмотр собранной версии локально |
+| `npm run lint` | Проверка кода линтером |
+
+---
+
+## Переменные окружения
+
+Для подключения к бэкенду скопируйте пример и при необходимости отредактируйте:
+
+```bash
+cp .env.example .env
+```
+
+В `.env` задаётся:
+
+- `VITE_API_BASE_URL` — адрес API бэкенда (по умолчанию `http://localhost:8000/api/v1`)
+- `VITE_APP_DOMAIN` — домен для cookie (для локальной разработки можно оставить `localhost`)
+
+После изменения `.env` перезапустите `npm run dev` или пересоберите Docker-образ.
+
+---
+
+## Структура проекта (кратко)
+
+- `src/app/` — точка входа, провайдеры (Telegram, авторизация).
+- `src/routes/` — страницы (file-based роутинг TanStack Router).
+- `src/features/` — фичи (профиль, язык и т.д.).
+- `src/shared/` — API, утилиты, UI, конфиг.
+- `src/locales/` — переводы (en, ru).
+
+Авторизация идёт через Telegram WebApp (initData) и эндпоинты бэкенда: login, user info, logout. Подробнее — в `docs/ENDPOINTS.md`.

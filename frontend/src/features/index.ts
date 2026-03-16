@@ -1,2 +1,1 @@
-// export * from './bubble-game';
-// export * from './forecast';
+// Intentionally left minimal for the template.

@@ -45,7 +45,7 @@ function RulesPage() {
                     </ul>
                 </div>
 
-                {/* 4. Presale Simulation */}
+                {/* 4. Section */}
                 <div className="flex flex-col gap-4">
                     <p className="txt-title-3 text-[var(--accent)]">{t('rules.section4.title')}</p>
                     <ul className="list-disc pl-6">

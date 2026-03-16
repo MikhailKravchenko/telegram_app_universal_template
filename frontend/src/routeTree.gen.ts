@@ -9,22 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TasksRouteImport } from './routes/tasks'
 import { Route as RulesRouteImport } from './routes/rules'
 import { Route as ProfileRouteImport } from './routes/profile'
-import { Route as PresaleRouteImport } from './routes/presale'
 import { Route as LanguageRouteImport } from './routes/language'
 import { Route as HelpRouteImport } from './routes/help'
-import { Route as GameRouteImport } from './routes/game'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ResultIndexRouteImport } from './routes/result/index'
-import { Route as ResultIdRouteImport } from './routes/result/$id'
+import { Route as Placeholder1RouteImport } from './routes/placeholder-1'
+import { Route as Placeholder2RouteImport } from './routes/placeholder-2'
+import { Route as Placeholder3RouteImport } from './routes/placeholder-3'
 
-const TasksRoute = TasksRouteImport.update({
-  id: '/tasks',
-  path: '/tasks',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const RulesRoute = RulesRouteImport.update({
   id: '/rules',
   path: '/rules',
@@ -33,11 +26,6 @@ const RulesRoute = RulesRouteImport.update({
 const ProfileRoute = ProfileRouteImport.update({
   id: '/profile',
   path: '/profile',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PresaleRoute = PresaleRouteImport.update({
-  id: '/presale',
-  path: '/presale',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LanguageRoute = LanguageRouteImport.update({
@@ -50,125 +38,104 @@ const HelpRoute = HelpRouteImport.update({
   path: '/help',
   getParentRoute: () => rootRouteImport,
 } as any)
-const GameRoute = GameRouteImport.update({
-  id: '/game',
-  path: '/game',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ResultIndexRoute = ResultIndexRouteImport.update({
-  id: '/result/',
-  path: '/result/',
+const Placeholder1Route = Placeholder1RouteImport.update({
+  id: '/placeholder-1',
+  path: '/placeholder-1',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ResultIdRoute = ResultIdRouteImport.update({
-  id: '/result/$id',
-  path: '/result/$id',
+const Placeholder2Route = Placeholder2RouteImport.update({
+  id: '/placeholder-2',
+  path: '/placeholder-2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Placeholder3Route = Placeholder3RouteImport.update({
+  id: '/placeholder-3',
+  path: '/placeholder-3',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/game': typeof GameRoute
+  '/placeholder-1': typeof Placeholder1Route
+  '/placeholder-2': typeof Placeholder2Route
+  '/placeholder-3': typeof Placeholder3Route
   '/help': typeof HelpRoute
   '/language': typeof LanguageRoute
-  '/presale': typeof PresaleRoute
   '/profile': typeof ProfileRoute
   '/rules': typeof RulesRoute
-  '/tasks': typeof TasksRoute
-  '/result/$id': typeof ResultIdRoute
-  '/result': typeof ResultIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/game': typeof GameRoute
+  '/placeholder-1': typeof Placeholder1Route
+  '/placeholder-2': typeof Placeholder2Route
+  '/placeholder-3': typeof Placeholder3Route
   '/help': typeof HelpRoute
   '/language': typeof LanguageRoute
-  '/presale': typeof PresaleRoute
   '/profile': typeof ProfileRoute
   '/rules': typeof RulesRoute
-  '/tasks': typeof TasksRoute
-  '/result/$id': typeof ResultIdRoute
-  '/result': typeof ResultIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/game': typeof GameRoute
+  '/placeholder-1': typeof Placeholder1Route
+  '/placeholder-2': typeof Placeholder2Route
+  '/placeholder-3': typeof Placeholder3Route
   '/help': typeof HelpRoute
   '/language': typeof LanguageRoute
-  '/presale': typeof PresaleRoute
   '/profile': typeof ProfileRoute
   '/rules': typeof RulesRoute
-  '/tasks': typeof TasksRoute
-  '/result/$id': typeof ResultIdRoute
-  '/result/': typeof ResultIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/game'
+    | '/placeholder-1'
+    | '/placeholder-2'
+    | '/placeholder-3'
     | '/help'
     | '/language'
-    | '/presale'
     | '/profile'
     | '/rules'
-    | '/tasks'
-    | '/result/$id'
-    | '/result'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/game'
+    | '/placeholder-1'
+    | '/placeholder-2'
+    | '/placeholder-3'
     | '/help'
     | '/language'
-    | '/presale'
     | '/profile'
     | '/rules'
-    | '/tasks'
-    | '/result/$id'
-    | '/result'
   id:
     | '__root__'
     | '/'
-    | '/game'
+    | '/placeholder-1'
+    | '/placeholder-2'
+    | '/placeholder-3'
     | '/help'
     | '/language'
-    | '/presale'
     | '/profile'
     | '/rules'
-    | '/tasks'
-    | '/result/$id'
-    | '/result/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  GameRoute: typeof GameRoute
+  Placeholder1Route: typeof Placeholder1Route
+  Placeholder2Route: typeof Placeholder2Route
+  Placeholder3Route: typeof Placeholder3Route
   HelpRoute: typeof HelpRoute
   LanguageRoute: typeof LanguageRoute
-  PresaleRoute: typeof PresaleRoute
   ProfileRoute: typeof ProfileRoute
   RulesRoute: typeof RulesRoute
-  TasksRoute: typeof TasksRoute
-  ResultIdRoute: typeof ResultIdRoute
-  ResultIndexRoute: typeof ResultIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/tasks': {
-      id: '/tasks'
-      path: '/tasks'
-      fullPath: '/tasks'
-      preLoaderRoute: typeof TasksRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/rules': {
       id: '/rules'
       path: '/rules'
@@ -181,13 +148,6 @@ declare module '@tanstack/react-router' {
       path: '/profile'
       fullPath: '/profile'
       preLoaderRoute: typeof ProfileRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/presale': {
-      id: '/presale'
-      path: '/presale'
-      fullPath: '/presale'
-      preLoaderRoute: typeof PresaleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/language': {
@@ -204,13 +164,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HelpRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/game': {
-      id: '/game'
-      path: '/game'
-      fullPath: '/game'
-      preLoaderRoute: typeof GameRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -218,18 +171,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/result/': {
-      id: '/result/'
-      path: '/result'
-      fullPath: '/result'
-      preLoaderRoute: typeof ResultIndexRouteImport
+    '/placeholder-1': {
+      id: '/placeholder-1'
+      path: '/placeholder-1'
+      fullPath: '/placeholder-1'
+      preLoaderRoute: typeof Placeholder1RouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/result/$id': {
-      id: '/result/$id'
-      path: '/result/$id'
-      fullPath: '/result/$id'
-      preLoaderRoute: typeof ResultIdRouteImport
+    '/placeholder-2': {
+      id: '/placeholder-2'
+      path: '/placeholder-2'
+      fullPath: '/placeholder-2'
+      preLoaderRoute: typeof Placeholder2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/placeholder-3': {
+      id: '/placeholder-3'
+      path: '/placeholder-3'
+      fullPath: '/placeholder-3'
+      preLoaderRoute: typeof Placeholder3RouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -237,15 +197,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  GameRoute: GameRoute,
+  Placeholder1Route: Placeholder1Route,
+  Placeholder2Route: Placeholder2Route,
+  Placeholder3Route: Placeholder3Route,
   HelpRoute: HelpRoute,
   LanguageRoute: LanguageRoute,
-  PresaleRoute: PresaleRoute,
   ProfileRoute: ProfileRoute,
   RulesRoute: RulesRoute,
-  TasksRoute: TasksRoute,
-  ResultIdRoute: ResultIdRoute,
-  ResultIndexRoute: ResultIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

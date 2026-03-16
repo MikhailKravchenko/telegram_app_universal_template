@@ -28,5 +28,12 @@
             "@/*": ["src/*"]
         }
     },
-    "include": ["src"]
+    "include": ["src"],
+    "exclude": [
+        "src/features/forecast",
+        "src/features/bubble-game",
+        "src/features/presale",
+        "src/features/result",
+        "src/features/tasks"
+    ]
 }

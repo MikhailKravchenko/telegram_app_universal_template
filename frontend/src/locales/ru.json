@@ -1,14 +1,9 @@
 {
     "nav": {
-        "game": "Игра",
-        "forecast": "Прогноз",
-        "result": "Результат",
-        "wallet": "Кошелёк",
-        "vpn": "VPN",
-        "charity": "Благотворительность",
-        "bankCard": "Банковская карта",
-        "tasks": "Задачи",
-        "presale": "Предпродажа",
+        "home": "Главная",
+        "placeholder1": "Страница 1",
+        "placeholder2": "Страница 2",
+        "placeholder3": "Страница 3",
         "profile": "Профиль",
         "rules": "Правила",
         "help": "Помощь",
@@ -27,14 +22,29 @@
     "common": {
         "comingSoon": "Скоро",
         "loading": "Загрузка...",
-        "welcome": "Добро пожаловать в Pulse Platform AI",
-        "enter": "Ввести",
-        "complete": "Завершить",
+        "welcome": "Добро пожаловать в приложение",
+        "enter": "Войти",
+        "complete": "Готово",
         "coins": "Монет",
-        "pulse": "PULSE",
         "insufficientBalance": "Недостаточно монет!",
         "yourBalance": "Ваш баланс:",
         "earnMore": "Зарабатывайте больше монет с бонусами или рефералами"
+    },
+    "home": {
+        "title": "Добро пожаловать",
+        "subtitle": "Используйте этот шаблон как стартовую точку для Telegram Mini App."
+    },
+    "placeholder1": {
+        "title": "Шаблонная страница 1",
+        "subtitle": "Замените эту страницу своей функциональностью."
+    },
+    "placeholder2": {
+        "title": "Шаблонная страница 2",
+        "subtitle": "Ещё один пример экрана для вашего приложения."
+    },
+    "placeholder3": {
+        "title": "Шаблонная страница 3",
+        "subtitle": "Используйте этот раздел для дополнительного контента."
     },
     "rules": {
         "title": "Правила и условия",
@@ -137,54 +147,9 @@
         "closed": "Закрыта",
         "newsProcessing": "Новость обрабатывается, дождитесь завершения раунда"
     },
-    "presale": {
-        "title": "Купить Pulse сейчас",
-        "youSpend": "Вы тратите монет",
-        "enterAmount": "Введите сумму",
-        "youReceive": "Вы получите",
-        "processing": "Обработка…",
-        "buyButton": "КУПИТЬ Pulse",
-        "youBought": "Вы купили",
-        "roundInfo": "Информация о раунде",
-        "round": "Раунд",
-        "daysLeft": "Осталось дней этапа",
-        "tokenPrice": "Цена токена",
-        "tokenForSale": "Токенов на продажу",
-        "myInvestments": "Мои инвестиции",
-        "investedCoin": "Инвестировано монет",
-        "tokensReceived": "Получено токенов Pulse",
-        "averageRate": "Средний курс",
-        "info": "Информация",
-        "totalInvested": "Всего инвестировано",
-        "nextRound": "Следующий раунд"
-    },
     "profile": {
-        "balance": "Баланс",
-        "invitedFriends": "Приглашённые друзья",
-        "friendsBonus": "Бонус от друзей",
-        "inviteButton": "Пригласить друзей",
-        "friendsList": "Список ваших друзей",
-        "noFriends": "У вас пока нет друзей",
-        "totalForecasts": "Всего прогнозов",
-        "presaleInvested": "Инвестировано в PreSale",
-        "linkCopied": "Реферальная ссылка скопирована в буфер обмена",
-        "shareText": "Присоединяйся ко мне в этом классном Telegram мини-приложении!",
-        "shareTitle": "Приглашение в Pulse",
-        "shareTitleShort": "Присоединяйся ко мне в Pulse!",
-        "userAvatar": "аватар пользователя",
-        "labels": {
-            "alpha": "Альфа",
-            "adept": "Адепт Потока",
-            "operator": "Системный оператор",
-            "architect": "Архитектор Реальности",
-            "legend": "Галактическая Легенда"
-        }
-    },
-    "tasks": {
-        "title": "Задачи",
-        "daily": "Ежедневный бонус за вход",
-        "subscribeX": "Подписаться на X",
-        "subscribeTelegram1": "Подписаться на Telegram (RU)",
-        "subscribeTelegram2": "Подписаться на Telegram (EN)"
+        "title": "Профиль",
+        "logout": "Выйти",
+        "userAvatar": "аватар пользователя"
     }
 }

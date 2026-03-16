@@ -14,17 +14,17 @@ type NavItem = {
 const navItems: NavItem[] = [
     {
         path: '/',
-        labelKey: 'nav.forecast',
+        labelKey: 'nav.home',
         icon: 'forecasts',
     },
     {
-        path: '/game',
-        labelKey: 'nav.game',
+        path: '/placeholder-1',
+        labelKey: 'nav.placeholder1',
         icon: 'game',
     },
     {
-        path: '/result',
-        labelKey: 'nav.result',
+        path: '/placeholder-2',
+        labelKey: 'nav.placeholder2',
         icon: 'result',
     },
     {

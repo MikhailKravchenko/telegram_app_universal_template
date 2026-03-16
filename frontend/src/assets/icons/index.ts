@@ -8,7 +8,6 @@ import Forecasts from './forecasts.svg?react';
 import Game from './game.svg?react';
 import More from './more.svg?react';
 import Octahedron from './octahedron.svg?react';
-import Presale from './presale.svg?react';
 import Result from './result.svg?react';
 import SquareRoundedCheck from './square-rounded-check.svg?react';
 import Star from './star.svg?react';
@@ -40,7 +39,6 @@ export const iconsMap = {
     game: Game,
     more: More,
     octahedron: Octahedron,
-    presale: Presale,
     result: Result,
     squareRoundedCheck: SquareRoundedCheck,
     star: Star,

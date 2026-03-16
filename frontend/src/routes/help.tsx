@@ -15,7 +15,7 @@ function HelpPage() {
 
             {/* Sections from Figma */}
             <div className="flex flex-col gap-8 mt-6">
-                {/* 1. Forecast */}
+                {/* 1. Section */}
                 <div className="flex flex-col gap-4">
                     <p className="txt-title-3 text-[var(--accent)]">{t('help.section1.title')}</p>
                     <ul className="list-disc pl-6">
@@ -24,7 +24,7 @@ function HelpPage() {
                     </ul>
                 </div>
 
-                {/* 2. Daily Forecast */}
+                {/* 2. Section */}
                 <div className="flex flex-col gap-4">
                     <p className="txt-title-3 text-[var(--accent)]">{t('help.section2.title')}</p>
                     <ul className="list-disc pl-6">
@@ -52,7 +52,7 @@ function HelpPage() {
                     </ul>
                 </div>
 
-                {/* 5. Presale */}
+                {/* 5. Section */}
                 <div className="flex flex-col gap-4">
                     <p className="txt-title-3 text-[var(--accent)]">{t('help.section5.title')}</p>
                     <ul className="list-disc pl-6">

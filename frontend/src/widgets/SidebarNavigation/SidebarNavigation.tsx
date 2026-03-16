@@ -43,13 +43,12 @@ export const SidebarNavigation = ({isOpen, onClose}: SidebarNavigationProps) => 
             >
                 <nav className="h-full overflow-y-auto px-4 py-2 pb-24">
                     {/* Navigation items */}
-                    <SidebarLink icon="game" label={t('nav.game')} to="/game" onClose={onClose} />
-                    <SidebarLink icon="forecasts" label={t('nav.forecast')} to="/" onClose={onClose} />
-                    <SidebarLink icon="result" label={t('nav.result')} to="/result" onClose={onClose} />
+                    <SidebarLink icon="forecasts" label={t('nav.home')} to="/" onClose={onClose} />
+                    <SidebarLink icon="game" label={t('nav.placeholder1')} to="/placeholder-1" onClose={onClose} />
+                    <SidebarLink icon="result" label={t('nav.placeholder2')} to="/placeholder-2" onClose={onClose} />
+                    <SidebarLink icon="tasks" label={t('nav.placeholder3')} to="/placeholder-3" onClose={onClose} />
 
-                    {/* Existing routes */}
-                    <SidebarLink icon="tasks" label={t('nav.tasks')} to="/tasks" onClose={onClose} />
-                    <SidebarLink icon="presale" label="Predict-To-Earn" to="/presale" onClose={onClose} />
+                    {/* Existing routes kept as template utilities */}
                     <SidebarLink icon="profile" label={t('nav.profile')} to="/profile" onClose={onClose} />
                     <SidebarLink icon="rules" label={t('nav.rules')} to="/rules" onClose={onClose} />
                     <SidebarLink icon="help" label={t('nav.help')} to="/help" onClose={onClose} />

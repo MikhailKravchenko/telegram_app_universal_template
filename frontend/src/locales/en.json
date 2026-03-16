@@ -1,14 +1,9 @@
 {
     "nav": {
-        "game": "Game",
-        "forecast": "Forecast",
-        "result": "Result",
-        "wallet": "Wallet",
-        "vpn": "VPN",
-        "charity": "Charity",
-        "bankCard": "Bank Card",
-        "tasks": "Tasks",
-        "presale": "PreSale",
+        "home": "Home",
+        "placeholder1": "Page 1",
+        "placeholder2": "Page 2",
+        "placeholder3": "Page 3",
         "profile": "Profile",
         "rules": "Rules",
         "help": "Help",
@@ -27,14 +22,29 @@
     "common": {
         "comingSoon": "Coming soon",
         "loading": "Loading...",
-        "welcome": "Welcome to Pulse Platform AI",
+        "welcome": "Welcome to App",
         "enter": "Enter",
         "complete": "Complete",
         "coins": "Coins",
-        "pulse": "PULSE",
         "insufficientBalance": "Not enough coins!",
         "yourBalance": "Your balance:",
         "earnMore": "Earn more coins with bonuses or referrals"
+    },
+    "home": {
+        "title": "Welcome",
+        "subtitle": "Use this template as a starting point for your Telegram Mini App."
+    },
+    "placeholder1": {
+        "title": "Placeholder page 1",
+        "subtitle": "Replace this page with your own feature."
+    },
+    "placeholder2": {
+        "title": "Placeholder page 2",
+        "subtitle": "Another example screen for your app."
+    },
+    "placeholder3": {
+        "title": "Placeholder page 3",
+        "subtitle": "Use this section for any additional content."
     },
     "rules": {
         "title": "Rules & Terms",
@@ -137,54 +147,9 @@
         "closed": "Closed",
         "newsProcessing": "The news is being processed, please wait for the round to finish"
     },
-    "presale": {
-        "title": "Buy now Pulse",
-        "youSpend": "You Spend Coin",
-        "enterAmount": "Enter amount",
-        "youReceive": "You will Receive",
-        "processing": "Processing…",
-        "buyButton": "BUY Pulse",
-        "youBought": "You bought",
-        "roundInfo": "Round Info",
-        "round": "Round",
-        "daysLeft": "Days Left Stage",
-        "tokenPrice": "Token Price",
-        "tokenForSale": "Token for Sale",
-        "myInvestments": "My Investments",
-        "investedCoin": "Invested Coin",
-        "tokensReceived": "Tokens Pulse Received",
-        "averageRate": "Average Rate",
-        "info": "Info",
-        "totalInvested": "Total Invested",
-        "nextRound": "Next Round"
-    },
     "profile": {
-        "balance": "Balance",
-        "invitedFriends": "Invited Friends",
-        "friendsBonus": "Friends Bonus",
-        "inviteButton": "Invite Friends",
-        "friendsList": "List of your Friends",
-        "noFriends": "You don't have friends yet",
-        "totalForecasts": "Total Forecasts",
-        "presaleInvested": "PreSale Invested",
-        "linkCopied": "Referral link copied to clipboard",
-        "shareText": "Join me on this awesome Telegram mini app!",
-        "shareTitle": "Invite to Pulse",
-        "shareTitleShort": "Join me on Pulse!",
-        "userAvatar": "user avatar",
-        "labels": {
-            "alpha": "Alpha",
-            "adept": "Adept of Flow",
-            "operator": "System operator",
-            "architect": "Architect of Reality",
-            "legend": "Galactic Legend"
-        }
-    },
-    "tasks": {
-        "title": "Tasks",
-        "daily": "Daily login bonus",
-        "subscribeX": "Subscribe to X",
-        "subscribeTelegram1": "Subscribe to Telegram (RU)",
-        "subscribeTelegram2": "Subscribe to Telegram (EN)"
+        "title": "Profile",
+        "logout": "Log out",
+        "userAvatar": "user avatar"
     }
 }

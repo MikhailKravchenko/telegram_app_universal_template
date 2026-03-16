@@ -1,6 +1,6 @@
 import React from 'react';
 import {useTranslation} from 'react-i18next';
-import Logo from '@/assets/pulse-game.svg?react';
+import Logo from '@/assets/logo-game.svg?react';
 
 interface SplashScreenProps {
     progress: number;
