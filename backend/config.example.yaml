@@ -1,0 +1,13 @@
+DEBUG: true
+SECRET_KEY: 'Django secret key'
+ALLOWED_HOSTS: 
+  - 'localhost'
+SWAGGER_TITLE: pulse_backend
+SWAGGER_DESCRIPTION: 'API for pulse_backend'
+
+REDIS_HOST: 'redis'
+REDIS_PORT: '6379'
+
+TELEGRAM_BOT_TOKEN: 'your_telegram_bot_token_here'
+
+STARTING_BALANCE: 100

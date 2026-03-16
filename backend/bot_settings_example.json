@@ -1,0 +1,27 @@
+{
+  "telegram_bot_username": {
+    "value": "pulse_bot",
+    "description": "Имя пользователя Telegram бота (без @)",
+    "is_active": true
+  },
+  "telegram_bot_name": {
+    "value": "Pulse Bot",
+    "description": "Отображаемое имя Telegram бота",
+    "is_active": true
+  },
+  "telegram_bot_description": {
+    "value": "Официальный бот проекта Pulse",
+    "description": "Описание Telegram бота",
+    "is_active": true
+  },
+  "welcome_message": {
+    "value": "Добро пожаловать в Pulse! 🚀",
+    "description": "Приветственное сообщение бота",
+    "is_active": true
+  },
+  "referral_message": {
+    "value": "Пригласите друзей и получите бонус! 💰",
+    "description": "Сообщение о реферальной программе",
+    "is_active": true
+  }
+}

@@ -1,0 +1,4 @@
+.balance {
+    border: 1px solid var(--coffee-brown);
+    background: linear-gradient(127deg, #e45125 -0.97%, #000 61.28%);
+}

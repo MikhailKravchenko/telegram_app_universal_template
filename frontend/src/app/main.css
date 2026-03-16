@@ -1,0 +1,114 @@
+/* Local fonts: SF Pro Display */
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../assets/fonts/sf-pro-display-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../assets/fonts/sf-pro-display-semibold.woff2') format('woff2');
+    font-weight: 590; /* Semibold по макету */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../assets/fonts/sf-pro-display-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography classes based on Figma design */
+@layer components {
+    .txt-title-1 {
+        @apply font-sf-pro-display text-title-1 font-bold;
+    }
+
+    .txt-title-2 {
+        @apply font-sf-pro-display text-title-2 font-bold;
+    }
+
+    .txt-title-3 {
+        @apply font-sf-pro-display text-title-3 font-[590];
+    }
+
+    .txt-headline {
+        @apply font-sf-pro-display text-headline font-[590];
+    }
+
+    .txt-subhead {
+        @apply font-sf-pro-display text-subhead font-normal;
+    }
+
+    .txt-button-bold {
+        @apply font-sf-pro-display text-button-bold font-[590];
+    }
+
+    .txt-body {
+        @apply font-sf-pro-display text-body font-normal;
+    }
+
+    .txt-footnote {
+        @apply font-sf-pro-display text-footnote font-normal;
+    }
+
+    .txt-caption {
+        @apply font-sf-pro-display text-caption font-normal;
+    }
+}
+
+:root {
+    --coffee-brown: #4a332b;
+    --black: #000;
+    --charcoal-grey: #79716b;
+    --accent: #e45125;
+    --white: #fff;
+    --light-green: #3cff5a;
+    --green: #2c8500;
+    --red: #c51e1e;
+    --soft-pink: #ffa1a1;
+    --copper-brown: #b0774d;
+    --vh: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+html {
+    width: 100%;
+    height: var(--vh);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    overflow: hidden;
+}
+
+body {
+    font-family:
+        'SF Pro Display',
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+    background: var(--black);
+    color: var(--white);
+    height: 100%;
+    overflow-y: auto;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 24px;
+}

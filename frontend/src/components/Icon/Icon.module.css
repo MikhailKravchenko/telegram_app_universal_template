@@ -1,0 +1,19 @@
+.icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.icon.size {
+    width: calc(var(--size) * 1px);
+    height: calc(var(--size) * 1px);
+}
+
+.icon.fill svg,
+.icon.fill svg *[fill] {
+    fill: var(--fill);
+}
+
+.icon.stroke svg,
+.icon.stroke svg *[stroke] {
+    stroke: var(--stroke);
+}

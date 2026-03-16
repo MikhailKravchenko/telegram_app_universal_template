@@ -1,0 +1,80 @@
+services:
+  db:
+    image: postgres:14.0
+    env_file:
+      - ./.env
+    volumes:
+      - ./.docker/postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      pulse_backend_net:
+    container_name: pulse_backend_db
+  web: &web
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    env_file:
+      - ./.env
+    ports:
+      - "127.0.0.1:${DOCKER_EXPOSE_PORT?8000}:${DJANGO_PORT?8000}"
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - ./src/:/code/src/
+      - ./static/:/code/static/
+      - ./logs:/code/logs/
+    command: /runserver.sh
+    restart: unless-stopped
+    networks:
+      pulse_backend_net:
+    container_name: pulse_backend_web
+  redis:
+    image: redis:5.0
+    restart: unless-stopped
+    volumes:
+      - ./.docker/redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+    networks:
+      pulse_backend_net:
+    container_name: pulse_redis
+  dramatiq:
+    env_file: .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - .:/code
+    restart: unless-stopped
+    command: python manage.py rundramatiq
+    networks:
+      pulse_backend_net:
+    container_name: pulse_dramatiq
+  scheduler:
+    env_file: .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/code
+    restart: unless-stopped
+    command: python manage.py run_scheduler
+    networks:
+      pulse_backend_net:
+    container_name: pulse_scheduler
+
+networks:
+  pulse_backend_net:

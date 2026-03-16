@@ -1,0 +1,190 @@
+{
+    "nav": {
+        "game": "Game",
+        "forecast": "Forecast",
+        "result": "Result",
+        "wallet": "Wallet",
+        "vpn": "VPN",
+        "charity": "Charity",
+        "bankCard": "Bank Card",
+        "tasks": "Tasks",
+        "presale": "PreSale",
+        "profile": "Profile",
+        "rules": "Rules",
+        "help": "Help",
+        "language": "Language",
+        "more": "More"
+    },
+    "language": {
+        "title": "Language",
+        "subtitle": "Choose your app language",
+        "english": "English (US)",
+        "russian": "Русский",
+        "current": "Current language",
+        "setEnglish": "Switch to English",
+        "setRussian": "Switch to Russian"
+    },
+    "common": {
+        "comingSoon": "Coming soon",
+        "loading": "Loading...",
+        "welcome": "Welcome to Pulse Platform AI",
+        "enter": "Enter",
+        "complete": "Complete",
+        "coins": "Coins",
+        "pulse": "PULSE",
+        "insufficientBalance": "Not enough coins!",
+        "yourBalance": "Your balance:",
+        "earnMore": "Earn more coins with bonuses or referrals"
+    },
+    "rules": {
+        "title": "Rules & Terms",
+        "section1": {
+            "title": "1. Game Currency",
+            "item1": "The app uses only virtual coins.",
+            "item2": "Coins cannot be exchanged for real money.",
+            "item3": "Balances increase via bonuses, wins, or referrals."
+        },
+        "section2": {
+            "title": "2. Predictions",
+            "item1": "Players place forecasts on whether news sentiment will be Positive or Negative.",
+            "item2": "Once a forecast is placed, it cannot be changed or canceled.",
+            "item3": "Outcomes are determined by an AI model analyzing news content."
+        },
+        "section3": {
+            "title": "3. Rewards",
+            "item1": "Winners receive their stake back plus a share of the losing pool (minus a small platform fee).",
+            "item2": "Losers forfeit their stake.",
+            "item3": "Bonus coins may be limited (e.g., max per hour from activity)."
+        },
+        "section4": {
+            "title": "4. Presale Simulation",
+            "item1": "The presale is fully virtual and for entertainment only.",
+            "item2": "Invest coins across 12 rounds to receive tokens at fixed rates.",
+            "item3": "No real financial transactions are involved."
+        },
+        "section5": {
+            "title": "5. Referrals",
+            "item1": "Invite friends using your personal link.",
+            "item2": "Referral rewards are given only in coins from the game's reserve fund."
+        }
+    },
+    "help": {
+        "title": "Help",
+        "section1": {
+            "title": "1. Forecast",
+            "item1": "Every 5 minutes you can bet on the next news: Positive or Negative.",
+            "item2": "Once placed, a bet cannot be changed."
+        },
+        "section2": {
+            "title": "2. Daily Forecast",
+            "item1": "Once per day you can bet which type of news will dominate in 24h.",
+            "item2": "The button is in the header until you place your daily bet."
+        },
+        "section3": {
+            "title": "3. Rewards",
+            "item1": "Winners get back their coins + a share of the bank.",
+            "item2": "Losers lose their stake.",
+            "item3": "A small platform fee is applied."
+        },
+        "section4": {
+            "title": "4. Coins",
+            "item1": "Coins are virtual only, no real money.",
+            "item2": "Earn more via daily login, referrals, or by winning bets."
+        },
+        "section5": {
+            "title": "5. Presale",
+            "item1": "Invest coins across 12 rounds to get tokens.",
+            "item2": "It's just a game, no real financial value."
+        },
+        "section6": {
+            "title": "6. Referrals",
+            "item1": "Share your referral link to invite friends and earn bonus coins.",
+            "item2": "Referral rewards depend on invited users' activity."
+        }
+    },
+    "forecast": {
+        "short": {
+            "tab": "Fast Forecast",
+            "title": "Make your forecasts on the next news",
+            "description": "You can place a forecast once every 5 minutes",
+            "button": "PLACE A FORECAST"
+        },
+        "long": {
+            "tab": "Daily Forecast",
+            "title": "Place your forecasts for the next 24h",
+            "description": "You can place a forecast once in the first half of the day",
+            "button": "PLACE DAILY FORECAST"
+        },
+        "positive": "Positive",
+        "negative": "Negative",
+        "amountLabel": "Forecast Amount",
+        "placeholder": "Please Enter your Forecast",
+        "placing": "PLACING...",
+        "betPlaced": "Your forecast is placed!",
+        "coinsOn": "coins on",
+        "resultIn": "Result in",
+        "forecastAmount": "Forecast:",
+        "roundFinished": "Round finished!",
+        "resultIsReady": "Result is ready — check it now."
+    },
+    "result": {
+        "title": "Result",
+        "emptyTitle": "Your game history is empty",
+        "emptyDescription": "Place your forecast to see results here",
+        "untitled": "Untitled news",
+        "positive": "Positive",
+        "negative": "Negative",
+        "closed": "Closed",
+        "newsProcessing": "The news is being processed, please wait for the round to finish"
+    },
+    "presale": {
+        "title": "Buy now Pulse",
+        "youSpend": "You Spend Coin",
+        "enterAmount": "Enter amount",
+        "youReceive": "You will Receive",
+        "processing": "Processing…",
+        "buyButton": "BUY Pulse",
+        "youBought": "You bought",
+        "roundInfo": "Round Info",
+        "round": "Round",
+        "daysLeft": "Days Left Stage",
+        "tokenPrice": "Token Price",
+        "tokenForSale": "Token for Sale",
+        "myInvestments": "My Investments",
+        "investedCoin": "Invested Coin",
+        "tokensReceived": "Tokens Pulse Received",
+        "averageRate": "Average Rate",
+        "info": "Info",
+        "totalInvested": "Total Invested",
+        "nextRound": "Next Round"
+    },
+    "profile": {
+        "balance": "Balance",
+        "invitedFriends": "Invited Friends",
+        "friendsBonus": "Friends Bonus",
+        "inviteButton": "Invite Friends",
+        "friendsList": "List of your Friends",
+        "noFriends": "You don't have friends yet",
+        "totalForecasts": "Total Forecasts",
+        "presaleInvested": "PreSale Invested",
+        "linkCopied": "Referral link copied to clipboard",
+        "shareText": "Join me on this awesome Telegram mini app!",
+        "shareTitle": "Invite to Pulse",
+        "shareTitleShort": "Join me on Pulse!",
+        "userAvatar": "user avatar",
+        "labels": {
+            "alpha": "Alpha",
+            "adept": "Adept of Flow",
+            "operator": "System operator",
+            "architect": "Architect of Reality",
+            "legend": "Galactic Legend"
+        }
+    },
+    "tasks": {
+        "title": "Tasks",
+        "daily": "Daily login bonus",
+        "subscribeX": "Subscribe to X",
+        "subscribeTelegram1": "Subscribe to Telegram (RU)",
+        "subscribeTelegram2": "Subscribe to Telegram (EN)"
+    }
+}
