@@ -1,66 +1,74 @@
-# pulse_backend
+## Django backend template for Telegram WebApp
 
-- [Getting Started](#getting-started)
-- [Project Features](#project-features)
-  - [Makefile](#makefile)
-  - [Pre Commit](#pre-commit)
+- **Назначение**: универсальный бэкенд‑шаблон для проектов с фронтом в Telegram WebApp.
+- **Что входит**:
+  - Django + DRF + PostgreSQL
+  - авторизация через Telegram WebApp (валидация `initData`, выдача JWT)
+  - минимальный `User` с Telegram‑полями (`telegram_id`, `telegram_username`, `telegram_first_name` и др.)
+  - базовые endpoint'ы: `auth` и `me`, health‑проверка
+
+Доменные модули (игра, ставки, пресейл и т.п.) полностью удалены — шаблон подходит как отправная точка для любого проекта.
 
 ## Getting Started
 
-After clone or init git repo you need to call init command.
+После клонирования репозитория:
 
-```
+```bash
 make init
 ```
 
-After that you need to set environment variables in `.env` and `config.yaml` files.
+Это создаст:
 
-The next step is to build the project.
+- `.env` — настройки БД и порта Django
+- `config.yaml` — DEBUG/SECRET_KEY/ALLOWED_HOSTS и `TELEGRAM_BOT_TOKEN`
 
-```
+Дальше:
+
+1. **Заполнить `.env` и `config.yaml`**
+2. **Собрать и запустить через Docker**:
+
+```bash
 make build
 ```
 
-When the web is fully built you can continue to configure the project.
+3. **Применить миграции и создать админа**:
 
-```
-make full-migrate   # makemigrations and migrate
-make admin          # createsuperuser
-make collectstatic  # collectstatic
-```
-
-## Project Features
-
-This project is built on DRF, PostgreSQL, and **Daphne ASGI server** for WebSocket support.
-
-### 🔄 ASGI & WebSocket Support
-
-Проект использует **Daphne** вместо Gunicorn для поддержки:
-
-- ⚡ WebSocket соединения в реальном времени
-- 🔄 Асинхронная обработка запросов
-- 📡 Django Channels для real-time функций
-
-**Подробная документация:** [DAPHNE_PRODUCTION_SETUP.md](docs/DAPHNE_PRODUCTION_SETUP.md)
-
-### Makefile
-
-This project uses **Makefile**. List of make commands:
-
-```
-make init
-make build
-make web-logs
-make full-migrate   # makemigrations and migrate
-make admin          # createsuperuser
-make collectstatic  # collectstatic
+```bash
+make full-migrate
+make admin
 ```
 
-**Примечание:** После `make build` сервер будет использовать Daphne (ASGI) вместо Gunicorn для поддержки WebSocket.
+## API Overview
 
-### Pre-Commit
+Базовый префикс API: `/api/v1/`.
 
-This project uses [pre-commit](https://pre-commit.com/). List of base linters:
+- **POST** `/api/v1/accounts/telegram/login/`
+  - Тело: `{ "telegramData": "<initData из Telegram WebApp>" }`
+  - Ответ: `{ "access": "<jwt>", "refresh": "<jwt>" }`
+
+- **GET** `/api/v1/accounts/me/`
+  - Заголовок: `Authorization: Bearer <access>`
+  - Ответ: минимальный профиль пользователя с Telegram‑полями.
+
+- **GET** `/health/`
+  - Простой health‑check: `{"status": "ok"}`.
+
+## Makefile
+
+Доступные команды:
+
+```bash
+make init          # скопировать env.example и config.example.yaml
+make build         # собрать и поднять docker-compose
+make web-logs      # логи веб-сервиса
+make full-migrate  # makemigrations и migrate
+make admin         # создать суперпользователя
+make collectstatic # собрать статику
+```
+
+## Pre-Commit
+
+Используется [pre-commit](https://pre-commit.com/) с базовыми линтерами:
 
 - black
 - flake8
